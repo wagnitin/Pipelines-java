@@ -3,9 +3,12 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger:
-- master
+#trigger: #Customize CI triggers
+#- master
 
+pr:
+ - master
+ - releases/*
 #pool:
   #vmImage: 'ubuntu-latest' # Commented this setting to run this pipeline on Windows platform rather than Linux.
   #vmImage: 'vs2017-win2016' # Commented this setting and using below multiplatform setting with below strategy
