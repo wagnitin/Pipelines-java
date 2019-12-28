@@ -7,7 +7,8 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  #vmImage: 'ubuntu-latest' # Commented this setting to run this pipeline on Windows platform rather than Linux.
+  vmImage: 'vs2017-win2016'
 
 steps:
 - task: Maven@3
